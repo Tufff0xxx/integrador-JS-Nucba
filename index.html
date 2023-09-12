@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <!-- Barra de navegación (Navbar) -->
+        <nav class="navbar">
+            <img src="imagen/bat.bmp-removebg-preview.png" alt="" class="logo">
+            <ul class="navbar-list">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Contacto</a></li>
+                
+            </ul>
+            <a id="carrito" href=""><i class="fas fa-shopping-cart"></i></a>
+        </nav>
+        <div id="modal-contenedor" class="modal-contenedor">
+
+        </div>
+    </header>
+    <main>
+        <button id="btnTodos">Todos</button>
+        <button id="btnBatman">Batman</button>
+        <button id="btnMarvel">Marvel</button>
+        <button id="btnSerie">Serie</button>
+        <button id="btnDC">DC</button>
+        
+        
+        <!-- Agregamos el botón "Ver Más" aquí -->
+        <button id="btnVerMas">Ver Más</button>
+
+    <div id="contenedor"></div>
+
+    
+    </main>
+    
+
+    <script src="datos.js"></script>
+    <script src="render.js"></script>
+</body>
+</html>

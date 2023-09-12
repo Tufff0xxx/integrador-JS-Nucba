@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration:none;
+    list-style-type: none;
+}
+
+#carrito{
+    color: red;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 65px;
+    padding: 0 30px;
+    /* position: fixed; */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    
+    
+}
+
+.navbar,
+.navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.navbar{
+    gap: 150px;
+    max-width: 1200px;
+    justify-content: space-between;
+}
+
+ul{
+    list-style: none;
+    gap: 20px;
+}
+
+
+.funko{
+    width: 300px;
+    background: var(--background);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+.logo{
+    
+        width: 80px;
+    
+}
+#contenedor{
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1200px;
+    gap: 30px;
+
+}
+
