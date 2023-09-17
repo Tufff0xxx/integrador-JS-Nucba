@@ -11,6 +11,97 @@
     color: red;
 }
 
+.modal-content{
+    display: flex;
+    
+    width: 200px;
+    gap: 20px;
+}
+
+
+
+/*.modal-contenedor {
+    display: flex;
+    margin-top: 23px;
+    display: none;
+    position: fixed;
+    top: 0; /* Mueve el modal hacia arriba, fuera de la pantalla */
+    /*left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+   /* transition: top 0.3s ease-in-out; /* Transición suave de la propiedad 'top' */
+   /* z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    /*overflow: auto; /* Agrega desplazamiento si el contenido es largo */
+    /*position: fixed;
+    top: calc(50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }*/
+  
+.modal-contenedor{
+    
+    width: 80%;
+    margin-top: 0 10%;
+    max-height: 88vh;
+    color: #fff;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+
+
+}
+.orden{
+    background-color: blue;
+}
+.modal-header{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: #fff;
+    width: 100%;
+    
+    
+
+}
+
+.modal-header-titulo{
+
+    justify-self: start;
+
+}
+
+.modal-header-titulo {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.modal-header-boton {
+    
+    cursor: pointer;
+    
+}
+
+.modal-contenedor > .modal-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+}
+
+.modal-contenedor > div > img {
+    height: 120px;
+    width: 120px;
+}
+
+
 header{
     width: 100%;
     display: flex;
@@ -30,7 +121,7 @@ header{
 .navbar-list {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 50px;
 }
 .navbar{
@@ -43,7 +134,15 @@ ul{
     list-style: none;
     gap: 20px;
 }
-
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+}
+    
 
 .funko{
     width: 300px;
