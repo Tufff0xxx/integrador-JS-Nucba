@@ -1,4 +1,3 @@
-// Tu archivo render.js
 const modalContenedor = document.getElementById('modal-contenedor');
 const verCarrito = document.getElementById('carrito');
 const contenedor = document.getElementById('contenedor');
@@ -58,6 +57,9 @@ contenedor.addEventListener('click', (event) => {
     }
 });
 
+
+
+
 verCarrito.addEventListener('click', (event) =>{
     event.preventDefault();
     modalContenedor.innerHTML =''
@@ -65,11 +67,14 @@ verCarrito.addEventListener('click', (event) =>{
     modalHeader.className = 'modal-header'
     modalHeader.innerHTML = `
     
-    <h1 class="modal-header-titulo">Carrito</>
+    <h1 class="modal-header-titulo">Carrito</h1>
     `
+    
+    
     modalContenedor.append(modalHeader)
+    
 
-   const modalButton = document.createElement('h1')
+  const modalButton = document.createElement('h1')
     modalButton.innerText = 'X'
     modalButton.className = 'modal-header-boton'
     modalButton.addEventListener('click', () =>{
@@ -86,6 +91,7 @@ verCarrito.addEventListener('click', (event) =>{
     <p>${product.precio} $</p>
 
     `;
+    modalHeader.appendChild(modalButton)
     modalContenedor.append(carritoContent)
 
     });
@@ -104,7 +110,7 @@ verCarrito.addEventListener('click', (event) =>{
 
 
 
-btnTodos.addEventListener('click', () => {
+/*btnTodos.addEventListener('click', () => {
     productosMostrados = 3;
     categoriaActual = 'Todos';
     mostrarProductos('Todos', productosMostrados);
@@ -140,7 +146,7 @@ btnVerMas.addEventListener('click', () => {
 });
 
 mostrarProductos('Todos', productosMostrados);
-
+*/
 
 
 const init = () =>{
