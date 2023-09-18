@@ -21,15 +21,15 @@ function mostrarProductos(categoria, cantidad) {
             <img src="${producto.cardImg}">
             <div class="hero-card-info">
                 <div class="hero-card-top">
-                    <h3>${producto.name}</h3>
+                    <h3 class="funko-nombre">${producto.name}</h3>
                 </div>
                 <div class="hero-card-button">
                     <div class="hero-card-creator">
                         <img class="logo" src="${producto.logo}">
                     </div>
                     <div class="hero-card-price">
-                        <span>${producto.category}</span>
-                        <span>${producto.precio}</span>
+                        <span class="funko-categoria">${producto.category}</span>
+                        <span class="funko-precio">${producto.precio}</span>
                         <button class="comprar" data-id="${producto.id}">COMPRAR</button>
                     </div>
                 </div>
@@ -148,6 +148,10 @@ const init = () =>{
     });
     
     mostrarProductos('Todos', productosMostrados);
+    verCarrito.addEventListener('click', (event) => {
+        event.preventDefault();
+        cargarCarrito();
+    });
 }
 
 init ()

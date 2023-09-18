@@ -177,6 +177,13 @@ main{
     text-align: center;
     gap: 20px;
 }
+
+.funko-nombre,
+.funko-categoria,
+.funko-precio{
+    color: blue;
+}
+
 .logo{
     
         width: 80px;

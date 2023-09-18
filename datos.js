@@ -101,7 +101,7 @@ const productsData = [
         precio: 6000,
     },
     {
-        id: 12,
+        id: 13,
         name: "Ciri",
         category: "Serie",
         logo: "./imagen/logo-Witcher.jpg",
@@ -109,15 +109,15 @@ const productsData = [
         precio: 4500,
     },
     {
-        id: 13,
-        name: "Geralt",
+        id: 14,
+        name: "Jennefer",
         category: "Serie",
         logo: "./imagen/logo-Witcher.jpg",
         cardImg: "./imagen/witcher-Jennefer.jpeg",
         precio: 6000,
     },
     {
-        id: 14,
+        id: 15,
         name: "Superman",
         category: "DC",
         logo: "./imagen/logo-DC.png",
@@ -125,7 +125,7 @@ const productsData = [
         precio: 1200,
     },
     {
-        id: 15,
+        id: 16,
         name: "Flash",
         category: "DC",
         logo: "./imagen/logo-DC.png",
@@ -133,7 +133,7 @@ const productsData = [
         precio: 6000,
     },
     {
-        id: 16,
+        id: 17,
         name: "Wonder Woman",
         category: "DC",
         logo: "./imagen/logo-DC.png",

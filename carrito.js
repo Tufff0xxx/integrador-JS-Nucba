@@ -69,10 +69,7 @@ const carritoVacio = () => {
     modalContenedor.append(modalHeader);
 }
 
-verCarrito.addEventListener('click', (event) => {
-    event.preventDefault();
-    cargarCarrito();
-});
+
 
 /*const pintarCarrito = (event) =>{
     event.preventDefault();
