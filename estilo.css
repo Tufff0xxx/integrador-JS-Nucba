@@ -108,11 +108,19 @@
     width: 120px;
 }
 
+.modal-mensaje{
+    color: red;
+}
+
 .total-content{
     display: flex;
     color: red;
     justify-content: center;
     
+}
+
+.borrar-producto{
+    cursor: pointer;
 }
 
 
