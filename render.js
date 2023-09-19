@@ -7,6 +7,11 @@ const btnMarvel = document.getElementById('btnMarvel');
 const btnSerie = document.getElementById('btnSerie');
 const btnDC = document.getElementById('btnDC');
 const btnVerMas = document.getElementById('btnVerMas');
+const botonesFiltro = document.querySelectorAll('.boton-filtro');
+
+const guardarLocalStorage = ()=>{
+    localStorage.setItem('carrito',JSON.stringify(carrito))
+}
 
 let productosMostrados = 3;
 let categoriaActual = 'Todos';
@@ -50,12 +55,22 @@ contenedor.addEventListener('click', (event) => {
         const productoSeleccionado = productsData.find(producto => producto.id === parseInt(productId, 10));
 
         if (productoSeleccionado) {
-            carrito.push(productoSeleccionado);
+            const carritoItem = carrito.find(item => item.id === productoSeleccionado.id);
+            
+            if (carritoItem) {
+                carritoItem.cantidad++; // Aumenta la cantidad si el producto ya está en el carrito
+            } else {
+                carrito.push({ ...productoSeleccionado, cantidad: 1 }); // Agrega el producto al carrito
+            }
+
             console.log('Producto agregado al carrito:', productoSeleccionado);
-            // Puedes realizar otras acciones aquí, como actualizar la visualización del carrito.
+            guardarLocalStorage()
+            mostrarCantidad()
         }
+        
     }
 });
+
 
 
 
@@ -112,6 +127,21 @@ mostrarProductos('Todos', productosMostrados);*/
 
 
 const init = () =>{
+    carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    mostrarCantidad()
+
+    botonesFiltro.forEach((boton) => {
+        boton.addEventListener('click', () => {
+            // Quitamos la clase "activo" de todos los botones
+            botonesFiltro.forEach((btn) => {
+                btn.classList.remove('activo');
+            });
+    
+            // Agregamos la clase "activo" al botón que se hizo clic
+            boton.classList.add('activo');
+        });
+    });
+
     btnTodos.addEventListener('click', () => {
         productosMostrados = 3;
         categoriaActual = 'Todos';
@@ -147,14 +177,27 @@ const init = () =>{
         mostrarProductos(categoriaActual, productosMostrados);
     });
     
+    
+
     mostrarProductos('Todos', productosMostrados);
     verCarrito.addEventListener('click', (event) => {
         event.preventDefault();
-        cargarCarrito();
+        if(carrito.length >0){
+            cargarCarrito()
+        }else{
+            carritoVacio()
+        }
+        mostrarCantidad();
+        
     });
+
+
+    
 }
 
 init ()
+
+
 
 
 

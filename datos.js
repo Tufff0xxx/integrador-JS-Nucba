@@ -10,6 +10,7 @@ const productsData = [
       logo: "./imagen/logo-Batman.jpg",
       cardImg: "./imagen/BatmanAnimado.png",
       precio: 6000,
+      cantidad: 1,
     },
     {
         id: 2,
@@ -18,6 +19,7 @@ const productsData = [
         logo: "./imagen/logo-Batman.jpg",
         cardImg: "./imagen/batinson.jpg",
         precio: 5000,
+        cantidad: 1,
     },
     {
         id: 3,
@@ -26,6 +28,7 @@ const productsData = [
         logo: "./imagen/logo-Batman.jpg",
         cardImg: "./imagen/batflex.jpg",
         precio: 6000,
+        cantidad: 1,
     },
         
     {
@@ -35,6 +38,7 @@ const productsData = [
         logo: "./imagen/logo-Batman.jpg",
         cardImg: "./imagen/armored-batman.jpg",
         precio: 6000,
+        cantidad: 1,
     },
     {
         id: 5,
@@ -43,6 +47,7 @@ const productsData = [
         logo: "./imagen/logo-Marvel.png",
         cardImg: "./imagen/captain-america.webp",
         precio: 6000,
+        cantidad: 1,
     },
     {
         id: 6,
@@ -51,6 +56,7 @@ const productsData = [
         logo: "./imagen/logo-Marvel.png",
         cardImg: "./imagen/spiderman.webp",
         precio: 8000,
+        cantidad: 1,
     },
     {
         id: 7,
@@ -59,6 +65,7 @@ const productsData = [
         logo: "./imagen/logo-Marvel.png",
         cardImg: "./imagen/ironman.jpg",
         precio: 3000,
+        cantidad: 1,
     },
     {
         id: 8,
@@ -67,6 +74,7 @@ const productsData = [
         logo: "./imagen/logo-Marvel.png",
         cardImg: "./imagen/groot.jpg",
         precio: 6080,
+        cantidad: 1,
     },
     {
       id: 9,
@@ -75,6 +83,7 @@ const productsData = [
       logo: "./imagen/logo-Stranger.png",
       cardImg: "./imagen/stranger-11.png",
       precio: 2500,
+      cantidad: 1,
     },
     {
         id: 10,
@@ -83,6 +92,7 @@ const productsData = [
         logo: "./imagen/logo-Stranger.png",
         cardImg: "./imagen/stranger-Mike.jpg",
         precio: 6000,
+        cantidad: 1,
     },
     {
         id: 11,
@@ -91,6 +101,7 @@ const productsData = [
         logo: "./imagen/logo-Stranger.png",
         cardImg: "./imagen/stranger-Demogorgon.jpg",
         precio: 1000,
+        cantidad: 1,
     },
     {
         id: 12,
@@ -99,6 +110,7 @@ const productsData = [
         logo: "./imagen/logo-Witcher.jpg",
         cardImg: "./imagen/witcher-Geralt.webp",
         precio: 6000,
+        cantidad: 1,
     },
     {
         id: 13,
@@ -107,6 +119,7 @@ const productsData = [
         logo: "./imagen/logo-Witcher.jpg",
         cardImg: "./imagen/whitcher-Ciri.jpeg",
         precio: 4500,
+        cantidad: 1,
     },
     {
         id: 14,
@@ -115,6 +128,7 @@ const productsData = [
         logo: "./imagen/logo-Witcher.jpg",
         cardImg: "./imagen/witcher-Jennefer.jpeg",
         precio: 6000,
+        cantidad: 1,
     },
     {
         id: 15,
@@ -123,6 +137,7 @@ const productsData = [
         logo: "./imagen/logo-DC.png",
         cardImg: "./imagen/dc-Superman.webp",
         precio: 1200,
+        cantidad: 1,
     },
     {
         id: 16,
@@ -131,6 +146,7 @@ const productsData = [
         logo: "./imagen/logo-DC.png",
         cardImg: "./imagen/dc-Flash.webp",
         precio: 6000,
+        cantidad: 1,
     },
     {
         id: 17,
@@ -139,10 +155,11 @@ const productsData = [
         logo: "./imagen/logo-DC.png",
         cardImg: "./imagen/dc-WonderWoman.jpeg",
         precio: 3700,
+        cantidad: 1,
     },
   ];
 
-  let carrito = []
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || []
 
 
 /*  document.querySelectorAll('.comprar').forEach((button, index) => {

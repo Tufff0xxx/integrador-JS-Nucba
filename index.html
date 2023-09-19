@@ -21,8 +21,11 @@
                 <li><a href="#">Contacto</a></li>
                 
             </ul>
-            <a id="carrito" href=""><i class="fas fa-shopping-cart"></i></a>
+            <div class="alinear-carrito">
+                <a id="carrito" href=""><i class="fas fa-shopping-cart"> <span id="cantidadCarrito" class="cantidadCarrito">0</span></i></a>
             
+            </div>
+           
             
             
             </div>
@@ -35,11 +38,11 @@
     </header>
     <main>
         <div class="botones">
-            <button id="btnTodos">Todos</button>
-            <button id="btnBatman">Batman</button>
-            <button id="btnMarvel">Marvel</button>
-            <button id="btnSerie">Serie</button>
-            <button id="btnDC">DC</button>
+            <button id="btnTodos" class="boton-filtro activo">Todos</button>
+            <button id="btnBatman" class="boton-filtro">Batman</button>
+            <button id="btnMarvel" class="boton-filtro">Marvel</button>
+            <button id="btnSerie" class="boton-filtro">Serie</button>
+            <button id="btnDC" class="boton-filtro">DC</button>
         </div>
         
         
@@ -56,8 +59,8 @@
     
 
     <script src="datos.js"></script>
-    
-    <script src="render.js"></script>
     <script src="carrito.js"></script>
+    <script src="render.js"></script>
+    
 </body>
 </html>

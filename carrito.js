@@ -1,4 +1,9 @@
+const cantidadCarrito = document.querySelector('#cantidadCarrito')
+
+    
+
 const cargarCarrito = () => {
+    
     modalContenedor.innerHTML = '';
     modalContenedor.style.display = 'block';
     const modalHeader = document.createElement("div");
@@ -9,13 +14,15 @@ const cargarCarrito = () => {
     modalContenedor.append(modalHeader);
 
     if (carrito.length === 0) {
-        carritoVacio(); // Llama a la función carritoVacio si el carrito está vacío
+        carritoVacio();
+         // Llama a la función carritoVacio si el carrito está vacío
     } else {
         const modalButton = document.createElement('h1');
         modalButton.innerText = 'X';
         modalButton.className = 'modal-header-boton';
         modalButton.addEventListener('click', () => {
             modalContenedor.style.display = 'none';
+            
         });
         modalContenedor.append(modalButton);
 
@@ -26,6 +33,7 @@ const cargarCarrito = () => {
                 <img class="imagenCarrito" src="${product.cardImg}">
                 <h3>${product.name}</h3>
                 <p>${product.precio} $</p>
+                <p>${product.cantidad}</>
             `;
             modalHeader.appendChild(modalButton);
             modalContenedor.append(carritoContent);
@@ -37,7 +45,7 @@ const cargarCarrito = () => {
             eliminar.addEventListener('click', () => eliminarProducto(product.id));
         });
 
-        const total = carrito.reduce((acc, el) => acc + el.precio, 0);
+        const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 
         const totalBuying = document.createElement("div");
         totalBuying.className = 'total-content';
@@ -49,6 +57,8 @@ const cargarCarrito = () => {
 const eliminarProducto = (productId) => {
     carrito = carrito.filter(product => product.id !== productId);
     cargarCarrito();
+    mostrarCantidad()
+    guardarLocalStorage()
 }
 
 const carritoVacio = () => {
@@ -69,6 +79,16 @@ const carritoVacio = () => {
     modalContenedor.append(modalHeader);
 }
 
+const mostrarCantidad = () =>
+{
+    cantidadCarrito.innerText = '0'
+    cantidadCarrito.style.display= 'block'
+    
+    cantidadCarrito.innerText = carrito.reduce((total, producto) => total + producto.cantidad, 0);
+    localStorage.setItem('cantidad', cantidadCarrito.innerText); // Actualiza la cantidad en el localStorage
+
+  
+}
 
 
 /*const pintarCarrito = (event) =>{
