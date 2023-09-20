@@ -33,10 +33,37 @@ const cargarCarrito = () => {
                 <img class="imagenCarrito" src="${product.cardImg}">
                 <h3>${product.name}</h3>
                 <p>${product.precio} $</p>
-                <p>${product.cantidad}</>
+                <span class="menos">-</span>
+                <p>${product.cantidad}</p>
+                <span class="mas">+</span>
+                
             `;
+          
             modalHeader.appendChild(modalButton);
             modalContenedor.append(carritoContent);
+
+            let mas= carritoContent.querySelector('.mas')
+            mas.addEventListener('click', () =>{
+                product.cantidad++;
+                cargarCarrito();
+                mostrarCantidad()
+                guardarLocalStorage()
+            })
+
+            let restar = carritoContent.querySelector('.menos')
+            restar.addEventListener('click', () =>{
+                if(product.cantidad ===0){
+                    eliminarProducto(product.id)
+                }else{
+                    product.cantidad--;
+                cargarCarrito();
+                mostrarCantidad()
+                guardarLocalStorage()
+                }
+                
+            })
+
+          
 
             let eliminar = document.createElement("span");
             eliminar.innerText = "❌";

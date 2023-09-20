@@ -237,3 +237,53 @@ main{
     color: white; /* Color del texto cuando está activo */
 }
 
+.menos,
+.mas{
+    cursor: pointer;
+}
+#menu{
+    width: 30px;
+    display: none;
+}
+
+
+@media (max-width: 576px){
+
+
+    
+    .navbar-list{
+        display: none;
+        
+        
+    }
+    .navbar-list {
+        margin-top: 50px;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: yellow;
+        padding: 2rem;
+    }
+
+    .visible{
+        display: block;
+        top: 0;
+        
+    }
+
+    #menu{
+        width: 10px;
+        display: block;
+        border: none;
+    }
+    #menu img{
+        width: 25px;
+        cursor: pointer;
+        display: block;
+    }
+}
+
+
+

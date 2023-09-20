@@ -8,7 +8,8 @@ const btnSerie = document.getElementById('btnSerie');
 const btnDC = document.getElementById('btnDC');
 const btnVerMas = document.getElementById('btnVerMas');
 const botonesFiltro = document.querySelectorAll('.boton-filtro');
-
+const menuHamburguesa = document.querySelector('#menu')
+const navbarList = document.querySelector('.navbar-list')
 const guardarLocalStorage = ()=>{
     localStorage.setItem('carrito',JSON.stringify(carrito))
 }
@@ -72,12 +73,13 @@ contenedor.addEventListener('click', (event) => {
 });
 
 
-
-
-
+    const abrirMenu = () =>{
+        menuHamburguesa.addEventListener('click',()=>{
+            navbarList.classList.toggle('visible')
+        })
+    }
     
-    
-    
+     abrirMenu()
         
     
     
@@ -191,7 +193,7 @@ const init = () =>{
         
     });
 
-
+   
     
 }
 
