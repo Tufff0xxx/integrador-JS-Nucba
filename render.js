@@ -10,10 +10,11 @@ const btnVerMas = document.getElementById('btnVerMas');
 const botonesFiltro = document.querySelectorAll('.boton-filtro');
 const menuHamburguesa = document.querySelector('#menu')
 const navbarList = document.querySelector('.navbar-list')
-const guardarLocalStorage = ()=>{
-    localStorage.setItem('carrito',JSON.stringify(carrito))
+const botonPagar = document.querySelector('.pagar')
+const guardarLocalStorage = () => {
+    localStorage.setItem('carrito', JSON.stringify(carrito))
 }
-
+let carritoAbierto = false
 let productosMostrados = 3;
 let categoriaActual = 'Todos';
 
@@ -24,20 +25,21 @@ function mostrarProductos(categoria, cantidad) {
     let productosFiltrados = productsData.filter(producto => categoria === 'Todos' || producto.category === categoria);
     productosFiltrados.slice(0, cantidad).forEach(producto => {
         contenedor.innerHTML += `<div class="funko">
-            <img src="${producto.cardImg}">
+            <img class="imagen-carta" src="${producto.cardImg}">
             <div class="hero-card-info">
-                <div class="hero-card-top">
+                <div class="card-name">
                     <h3 class="funko-nombre">${producto.name}</h3>
                 </div>
                 <div class="hero-card-button">
                     <div class="hero-card-creator">
-                        <img class="logo" src="${producto.logo}">
+                        <img class="logo-carta" src="${producto.logo}">
                     </div>
                     <div class="hero-card-price">
-                        <span class="funko-categoria">${producto.category}</span>
+                        <span class="funko-categoria">PRECIO $ </span>
                         <span class="funko-precio">${producto.precio}</span>
-                        <button class="comprar" data-id="${producto.id}">COMPRAR</button>
+
                     </div>
+                    <button class="comprar" data-id="${producto.id}">COMPRAR</button>
                 </div>
             </div>
         </div>`;
@@ -57,7 +59,7 @@ contenedor.addEventListener('click', (event) => {
 
         if (productoSeleccionado) {
             const carritoItem = carrito.find(item => item.id === productoSeleccionado.id);
-            
+
             if (carritoItem) {
                 carritoItem.cantidad++; // Aumenta la cantidad si el producto ya está en el carrito
             } else {
@@ -68,67 +70,27 @@ contenedor.addEventListener('click', (event) => {
             guardarLocalStorage()
             mostrarCantidad()
         }
-        
+
     }
 });
 
+const abrirMenu = () => {
+    menuHamburguesa.addEventListener('click', () => {
+        navbarList.classList.toggle('visible')
+    })
+}
 
-    const abrirMenu = () =>{
-        menuHamburguesa.addEventListener('click',()=>{
-            navbarList.classList.toggle('visible')
-        })
-    }
+abrirMenu()
+
+
+const abrirCerrarModal = () => {
     
-     abrirMenu()
-        
-    
-    
+   if(modalContenedor.style.display === 'block'){
+        modalContenedor.style.display = 'none'
+   }
+}
 
-
-
-
-
-
-/*btnTodos.addEventListener('click', () => {
-    productosMostrados = 3;
-    categoriaActual = 'Todos';
-    mostrarProductos('Todos', productosMostrados);
-});
-
-btnBatman.addEventListener('click', () => {
-    productosMostrados = 3;
-    categoriaActual = 'Batman';
-    mostrarProductos('Batman', productosMostrados);
-});
-
-btnMarvel.addEventListener('click', () => {
-    productosMostrados = 3;
-    categoriaActual = 'Marvel';
-    mostrarProductos('Marvel', productosMostrados);
-});
-
-btnSerie.addEventListener('click', () => {
-    productosMostrados = 3;
-    categoriaActual = 'Serie';
-    mostrarProductos('Serie', productosMostrados);
-});
-
-btnDC.addEventListener('click', () => {
-    productosMostrados = 3;
-    categoriaActual = 'DC';
-    mostrarProductos('DC', productosMostrados);
-});
-
-btnVerMas.addEventListener('click', () => {
-    productosMostrados += 3;
-    mostrarProductos(categoriaActual, productosMostrados);
-});
-
-mostrarProductos('Todos', productosMostrados);*/
-
-
-
-const init = () =>{
+const init = () => {
     carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     mostrarCantidad()
 
@@ -138,7 +100,7 @@ const init = () =>{
             botonesFiltro.forEach((btn) => {
                 btn.classList.remove('activo');
             });
-    
+
             // Agregamos la clase "activo" al botón que se hizo clic
             boton.classList.add('activo');
         });
@@ -149,62 +111,55 @@ const init = () =>{
         categoriaActual = 'Todos';
         mostrarProductos('Todos', productosMostrados);
     });
-    
+
     btnBatman.addEventListener('click', () => {
         productosMostrados = 3;
         categoriaActual = 'Batman';
         mostrarProductos('Batman', productosMostrados);
     });
-    
+
     btnMarvel.addEventListener('click', () => {
         productosMostrados = 3;
         categoriaActual = 'Marvel';
         mostrarProductos('Marvel', productosMostrados);
     });
-    
+
     btnSerie.addEventListener('click', () => {
         productosMostrados = 3;
         categoriaActual = 'Serie';
         mostrarProductos('Serie', productosMostrados);
     });
-    
+
     btnDC.addEventListener('click', () => {
         productosMostrados = 3;
         categoriaActual = 'DC';
         mostrarProductos('DC', productosMostrados);
     });
-    
+
     btnVerMas.addEventListener('click', () => {
         productosMostrados += 3;
         mostrarProductos(categoriaActual, productosMostrados);
     });
-    
-    
 
     mostrarProductos('Todos', productosMostrados);
-    verCarrito.addEventListener('click', (event) => {
+
+
+    verCarrito.addEventListener('click', (event)  => {
         event.preventDefault();
-        if(carrito.length >0){
+        abrirCerrarModal()
+        if (carrito.length > 0) {
             cargarCarrito()
-        }else{
+        } else {
             carritoVacio()
         }
         mostrarCantidad();
-        
-    });
 
-   
+    });
     
+
+
+
+
 }
 
 init ()
-
-
-
-
-
-
-
-
-
-

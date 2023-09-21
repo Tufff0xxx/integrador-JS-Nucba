@@ -30,12 +30,18 @@ const cargarCarrito = () => {
             let carritoContent = document.createElement('div');
             carritoContent.className = 'modal-content';
             carritoContent.innerHTML = `
+                <div class="modal-content-img">
                 <img class="imagenCarrito" src="${product.cardImg}">
+                </div>
+                
+                <div class="modal-content-info">
                 <h3>${product.name}</h3>
-                <p>${product.precio} $</p>
+                <p>$ ${product.precio} </p>
                 <span class="menos">-</span>
                 <p>${product.cantidad}</p>
                 <span class="mas">+</span>
+                </>
+                
                 
             `;
           
@@ -76,8 +82,30 @@ const cargarCarrito = () => {
 
         const totalBuying = document.createElement("div");
         totalBuying.className = 'total-content';
-        totalBuying.innerHTML = `Total a pagar: ${total} $`;
+        totalBuying.innerHTML = `Total a pagar: ${total} $
+                                `;
+
+        const modalButtonPagar = document.createElement('button');
+        modalButtonPagar.className = "pagar"
+        modalButtonPagar.textContent = "PAGAR"
+        modalButtonPagar.addEventListener('click', () => {
+    
+            alert('Compra realizada con éxito. ¡Gracias por tu compra!');
+            
+            // Limpia el carrito después de la compra (si es necesario).
+            carrito = [];
+            
+            // Actualiza la cantidad en el carrito y el almacenamiento local.
+            mostrarCantidad();
+            guardarLocalStorage();
+            
+            // Cierra el modal de carrito.
+            modalContenedor.style.display = 'none';
+        });
+
+        totalBuying.appendChild(modalButtonPagar)
         modalContenedor.append(totalBuying);
+        
     }
 }
 

@@ -14,7 +14,7 @@
     <header>
         <!-- Barra de navegación (Navbar) -->
         <nav class="navbar">
-            <img src="imagen/bat.bmp-removebg-preview.png" alt="" class="logo">
+            <img src="imagen/funko-logo-1.png" alt="" class="logo">
             <ul class="navbar-list">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Categorías</a></li>
@@ -32,7 +32,7 @@
             
             
         </nav>
-        <button id="menu"><img  src="imagen/hamburguesaAmarilla.png" alt=""></button>
+        <button id="menu"><img  src="imagen/menuHambuguesaAzul.png" alt=""></button>
         <div id="modal-contenedor" class="modal-contenedor">
             <div class="orden">
             
@@ -40,6 +40,44 @@
             </div>
     </header>
     <main>
+
+        <section id="hero">
+            <div class="hero-info">
+                <h1>BIENVENIDOS A LA CASA DEL FUNKO POP</h1>
+            <p>Si en nuestro local encontraras el funko pop que busques al mejor precio de mercado.
+                Si no lo tenemos lo encontramos, todo para agrandar tu coleccion. Encontraras funko pop de heroes, series
+                peliculas y mas.
+            </p>
+            <a href="#">ENTRAR</a>
+            </div>
+           
+                
+                
+            
+            <div class="hero-card">
+                <img src="imagen/carta-central-funko.avif" alt="image card  de section hero">
+                <div class="hero-card-info">
+                    <div class="hero-card-top">
+                        <h3>La Batifamilia</h3>
+
+                    </div>
+                    <div class="hero-card-button">
+                        <div class="hero-card-creator">
+                            <img id="logo-carta" src="imagen/PopLogo.webp" alt="DC COMICS">
+                        </div>
+                        <div class="hero-card-price">
+                            <span>PRECIO</span>
+                            <span>INVALUABLE</span>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </section>
+        <section id="hero2">
+            <p>Esta es una muestra de los productos que tenemos disponibles en la casa del funko pop.
+            </p>
+    </section>
+    <section id="productos">
         <div class="botones">
             <button id="btnTodos" class="boton-filtro activo">Todos</button>
             <button id="btnBatman" class="boton-filtro">Batman</button>
@@ -47,14 +85,78 @@
             <button id="btnSerie" class="boton-filtro">Serie</button>
             <button id="btnDC" class="boton-filtro">DC</button>
         </div>
-        
-        
-        
-        <!-- Agregamos el botón "Ver Más" aquí -->
-        <button id="btnVerMas">Ver Más</button>
+        <section id="cartas">
+            <div id="contenedor"></div>
+            
+        </section>
+        <button id="btnVerMas" class="btnVerMas">Ver Más</button>
+    
+    </section>
 
-    <div id="contenedor"></div>
+   </main>
 
+        
+        
+        
+        
+
+            </div>
+        </div>
+        <div class="titulo">
+            <h1>SOBRE TI Y SOBRE NOSOTROS</h1>        
+        </div>     
+        
+        <section id="contacto">
+            
+           
+           <div class="orden"></div>
+                <form  class="form_container" id="registrar" >
+                    <div class="datos">
+                        <h2>REGISTRATE</h2>
+                        <label for="nombre">NOMBRE</label>
+                        <input type="text" name="nombre" id="nombre">
+                        <label for="apellido">APELLIDO</label>
+                        <input type="text" name="apellido" id="apellido">
+                        <label for="telefono">TELEFONO</label>
+                        <input type="tel" name="telefono" id="telefono">
+                        <label for="email">EMAIL</label>                
+                        <input type="email" name="email" id="email">
+
+                        <input type="submit" value="ENVIAR">
+                    </form>
+                    <div id="mensajeError" class="modal-mensaje"></div>    
+                </div>
+                
+                
+                <div class="contacto-tienda">
+                    <h2>DATOS DE CONTACTO</h2>
+                    <div class="contacto-info">
+                        <div class="contacto-info-direccion">
+                                <h3>DIRECCION</h3>
+                            <LABEL>
+                                Calle Publica C
+                            </LABEL>
+                            <LABEL>
+                                N° 1234
+                            </LABEL>
+                            <LABEL>
+                                Barrio Piazzi
+                            </LABEL>
+                            <h3>DATOS DEL PROPIETARIO</h3>
+                            <LABEL>
+                                Dueño: Giuliano Di Piatzi
+                            </LABEL>
+                            <LABEL>
+                                Telefono: 3516123456
+                            </LABEL>
+                            <LABEL>
+                                Correo: giuPia@gmail.com
+                            </LABEL>
+                        </div>
+                </div>
+            </div>
+            
+        </section>
     
 
     
@@ -64,6 +166,7 @@
     <script src="datos.js"></script>
     <script src="carrito.js"></script>
     <script src="render.js"></script>
+    <script src="formulario.js"></script>
     
 </body>
 </html>
