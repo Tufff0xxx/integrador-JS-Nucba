@@ -325,7 +325,8 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 80%;
+    
+    width: 78%;
     gap: 10px;
     border-radius: 5px;
 
@@ -435,7 +436,7 @@ main{
     width: 100%;
     color: white;
     gap: 10px;
-    padding-left: 20px;
+    
 }
 .titulo{
     display: flex;
@@ -446,7 +447,7 @@ main{
     padding: 15px;
 }
 .orden{
-   gap: 150px;
+   gap: 50px;
 
     display: flex;
    justify-content: space-evenly;
