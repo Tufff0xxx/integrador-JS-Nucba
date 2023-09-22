@@ -6,9 +6,8 @@
     <title>Proyecto</title>
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -19,47 +18,29 @@
                 <li><a href="#hero">Inicio</a></li>
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                
             </ul>
             <div class="alinear-carrito">
                 <a id="carrito" href=""><i class="fas fa-shopping-cart"> <span id="cantidadCarrito" class="cantidadCarrito">0</span></i></a>
-            
             </div>
-           
-            
-            
-            </div>
-            
-            
         </nav>
-        <button id="menu"><img  src="imagen/menuHambuguesaAzul.png" alt=""></button>
+        <button id="menu"><img src="imagen/menuHambuguesaAzul.png" alt=""></button>
         <div id="modal-contenedor" class="modal-contenedor">
             <div class="orden">
-            
             </div>
-            </div>
+        </div>
     </header>
     <main>
-
         <section id="hero">
             <div class="hero-info">
                 <h1>BIENVENIDOS A LA CASA DEL FUNKO POP</h1>
-            <p>En nuestro local encontraras el funko pop que busques al mejor precio de mercado.
-                Si no lo tenemos lo encontramos, todo para agrandar tu coleccion. Encontraras funko pop de heroes, series
-                peliculas y mas.
-            </p>
-            <a href="#">ENTRAR</a>
+                <p>En nuestro local encontrarás el Funko Pop que buscas al mejor precio de mercado. Si no lo tenemos, lo encontramos, todo para agrandar tu colección. Encontrarás Funko Pop de héroes, series, películas y más.</p>
+                <a href="#">ENTRAR</a>
             </div>
-           
-                
-                
-            
             <div class="hero-card">
-                <img src="imagen/carta-central-funko.avif" alt="image card  de section hero">
+                <img src="imagen/carta-central-funko.avif" alt="image card de section hero">
                 <div class="hero-card-info">
                     <div class="hero-card-top">
                         <h3>LA CASA DEL FUNKO POP</h3>
-
                     </div>
                     <div class="hero-card-button">
                         <div class="hero-card-creator">
@@ -74,43 +55,26 @@
             </div>
         </section>
         <section id="hero2">
-            <p>Esta es una muestra de los productos que tenemos disponibles en la casa del funko pop.
-            </p>
-    </section>
-    <section id="productos">
-        <div class="botones">
-            <button id="btnTodos" class="boton-filtro activo">Todos</button>
-            <button id="btnBatman" class="boton-filtro">Batman</button>
-            <button id="btnMarvel" class="boton-filtro">Marvel</button>
-            <button id="btnSerie" class="boton-filtro">Serie</button>
-            <button id="btnDC" class="boton-filtro">DC</button>
-        </div>
-        <section id="cartas">
-            <div id="contenedor"></div>
-            
+            <p>Esta es una muestra de los productos que tenemos disponibles en la casa del Funko Pop.</p>
         </section>
-        <button id="btnVerMas" class="btnVerMas">Ver Más</button>
-    
-    </section>
-
-   </main>
-
-        
-        
-        
-        
-
+        <section id="productos">
+            <div class="botones">
+                <button id="btnTodos" class="boton-filtro activo">Todos</button>
+                <button id="btnBatman" class="boton-filtro">Batman</button>
+                <button id="btnMarvel" class="boton-filtro">Marvel</button>
+                <button id="btnSerie" class="boton-filtro">Serie</button>
+                <button id="btnDC" class="boton-filtro">DC</button>
             </div>
-        </div>
-        <div class="titulo">
-            <h1>SOBRE TI Y SOBRE NOSOTROS</h1>        
-        </div>     
-        
-        <section id="contacto">
-            
-           
-           <div class="orden">
-                <form  class="form" id="registrar" >
+            <section id="cartas">
+                <div id="contenedor"></div>
+            </section>
+            <button id="btnVerMas" class="btnVerMas">Ver Más</button>
+        </section>
+    </main>
+    <section id="contacto">
+        <div class="orden">
+            <div class="orden-interno">
+                <form class="form" id="registrar">
                     <div class="datos">
                         <h2>REGISTRATE</h2>
                         <label for="nombre">NOMBRE</label>
@@ -119,63 +83,36 @@
                         <input type="text" name="apellido" id="apellido">
                         <label for="telefono">TELEFONO</label>
                         <input type="tel" name="telefono" id="telefono">
-                        <label for="email">EMAIL</label>                
+                        <label for="email">EMAIL</label>
                         <input type="email" name="email" id="email">
-
                         <input type="submit" value="ENVIAR">
-                    </div>      
-             </form>
-                <div id="mensajeError" class="modal-mensaje">
-
-                    <div class="contacto-tienda">
-                
-                        <div class="contacto-info">
-                            
-                            <div class="contacto-info-direccion">
-                                <h2>DATOS DE CONTACTO</h2>
-                                    <h3>DIRECCION</h3>
-                                <LABEL>
-                                    Calle Publica C
-                                </LABEL>
-                                <LABEL>
-                                    N° 1234
-                                </LABEL>
-                                <LABEL>
-                                    Barrio Piazzi
-                                </LABEL>
-                                <h3>DATOS DEL PROPIETARIO</h3>
-                                <LABEL>
-                                    Dueño: Giuliano Di Piatzi
-                                </LABEL>
-                                <LABEL>
-                                    Telefono: 3516123456
-                                </LABEL>
-                                <LABEL>
-                                    Correo: giuPia@gmail.com
-                                </LABEL>
-                            </div>
+                        <div id="mensajeError" class="modal-mensaje"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="contacto-tienda">
+                <div class="contacto-info">
+                    <div class="contacto-info-direccion">
+                        <h2>DATOS DE CONTACTO</h2>
+                        <h3>DIRECCION</h3>
+                        <label>Calle Publica C</label>
+                        <label>N° 1234</label>
+                        <label>Barrio Piazzi</label>
+                        <h3>DATOS DEL PROPIETARIO</h3>
+                        <label>Dueño: Giuliano Di Piatzi</label>
+                        <label>Telefono: 3516123456</label>
+                        <label>Correo: giuPia@gmail.com</label>
                     </div>
                 </div>
-                   </div>      
             </div>
-            
-            
-           
-                
-            
-        </section>
-    
-        <footer>
-            <LABEL>🎮 HECHO POR NERDS PARA NERDS 🎮</LABEL>
-        </footer>
-    
-    </main>
-    
-
+        </div>
+    </section>
+    <footer>
+        <p>🎮 HECHO POR NERDS PARA NERDS 🎮</p>
+    </footer>
     <script src="datos.js"></script>
     <script src="carrito.js"></script>
     <script src="render.js"></script>
     <script src="formulario.js"></script>
-    
 </body>
 </html>
