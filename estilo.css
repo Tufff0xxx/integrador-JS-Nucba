@@ -436,33 +436,45 @@ main{
     width: 100%;
     color: white;
     gap: 10px;
+    padding-left: 20px;
 }
 .titulo{
     display: flex;
     flex-direction: column;
     text-align: center;
     background-color: blue;
-    color: white;padding: 15px;
+    color: white;
+    padding: 15px;
 }
 .orden{
-    gap: 25px;
+   gap: 25px;
+
+    display: flex;
+   justify-content: space-evenly;
+    
+
 }
 
 .contacto-info-direccion{
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
+    padding-top:  15px;
     background-color: white;
     gap: 15px;
-    padding: 8px;
+    
     color: blue;
 }
-.contacto-info-direccion h3{
+.contacto-info-direccion h3, h2{
     color: blue;
 }
+
 .contacto-info{
     gap: 20px;
     color: blue;
+}
+
+.form{
+    padding-bottom: 15px;
 }
 
 footer{
@@ -570,6 +582,17 @@ footer{
     }
     #contenedor{
         max-width: 575px;
+    }
+    #contacto{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+   
+    .orden{
+        display: flex;
+        flex-direction: column;
+        
     }
 
 }
