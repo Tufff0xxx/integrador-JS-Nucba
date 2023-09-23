@@ -92,14 +92,14 @@ const cargarCarrito = () => {
     
             alert('Compra realizada con éxito. ¡Gracias por tu compra!');
             
-            // Limpia el carrito después de la compra (si es necesario).
+           
             carrito = [];
             
-            // Actualiza la cantidad en el carrito y el almacenamiento local.
+         
             mostrarCantidad();
             guardarLocalStorage();
             
-            // Cierra el modal de carrito.
+          
             modalContenedor.style.display = 'none';
         });
 

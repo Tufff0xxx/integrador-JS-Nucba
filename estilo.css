@@ -34,6 +34,7 @@
     display: flex;
     
     align-items: center;
+    text-align: center;
     padding-left: 10px;
     width: 100%;
     gap: 20px;
@@ -79,12 +80,15 @@
 
 
 .modal-header{
-    padding-left: 50px;
+    
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    text-align: center;
     background-color: black;
     color: #fff;
     width: 100%;
+    
     
     
     
@@ -95,7 +99,7 @@
 
 
 .modal-header-titulo {
-    margin-left: 100px;
+    
     text-align: center;
     
     
@@ -165,7 +169,7 @@ header{
 }
 .navbar{
     gap: 150px;
-    max-width: 1200px;
+    
     justify-content: space-between;
     
 }
@@ -418,6 +422,7 @@ main{
     background-color: var(--bacground-Card);
     
     padding: 25px;
+    width: 100%;
 }
 #contacto h1{
     font-size: 50px;
@@ -501,9 +506,17 @@ footer{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-left: 50px;
-        width: 200px;
+        
+        width: 100%;
         gap: 20px;
+    }
+    .modal-contenedor{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 57%;
     }
 
     #productos{
@@ -512,12 +525,12 @@ footer{
 
 
     #cartas{
-        width: 100%;
+        width: 70%;
 
     }
 
     #hero{
-        
+        display: none;
         margin-top: 65px;
         padding: 70px;
         width: 60%;
@@ -530,6 +543,9 @@ footer{
         border-radius: 5px;
         background: var(--background-Hero);
         width: 70%;
+    }
+    .hero-card{
+        display: none;
     }
     .hero-info {
         width: 100%;
