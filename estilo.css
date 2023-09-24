@@ -52,14 +52,16 @@
     gap: 10px;
 }
 
-
+a{
+    color: white;
+}
   
 
 
 .modal-contenedor{
     display: flex;
     width: 30%;
-    margin-top: 0 10%;
+    margin-top: 34px;
     max-height: 88vh;
     color: #fff;
     background-color: black;
@@ -208,14 +210,14 @@ main{
 .hero-info{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 25px;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 .hero-info h1{
-    font-size: 48px;
-    width: 80%;
+    font-size: 45px;
+    width: 100%;
     font-weight: 500px;
     color: blue;
 }
@@ -493,6 +495,43 @@ footer{
     width: 100%;
 }
 
+/*------------------------
+
+            TABLET
+
+--------------------------*/
+
+@media  (max-width: 992px){
+
+        #hero{
+            display: flex;
+            flex-direction: column;
+        }
+        .hero-info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            
+        }
+    
+        .hero-info h1{
+            font-size: 30px;
+        }
+        
+        .hero-info p{
+            width: 100%;
+            
+    
+        }
+           
+
+}
+
+
+
 @media (max-width: 576px){
     body{
         max-width: 575px;
@@ -513,6 +552,7 @@ footer{
     .modal-contenedor{
         display: flex;
         flex-direction: column;
+        margin-top: 20px;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -572,14 +612,17 @@ footer{
         
     
    .navbar-list {
-        margin-top: 50px;
+        margin-top: 65px;
+        height: 300px;
         display: none;
         flex-direction: column;
         position: absolute;
         top: 0;
         right: 0;
-        background-color: yellow;
+        background-color: black;
         padding: 2rem;
+
+        
     }
 
     .visible{
