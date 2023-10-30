@@ -80,7 +80,7 @@ a{
 }
 
 .modal-contenedor {
-    font-size: 10px;
+    font-size: 15px;
 }
 
 
@@ -602,7 +602,7 @@ footer{
         align-items: center;
         
         width: 100%;
-        gap: 20px;
+        gap: 15px;
     }
     .modal-contenedor{
         display: flex;
@@ -611,7 +611,8 @@ footer{
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 57%;
+        width: 85%;
+        font-size: 18px;
     }
 
     #productos{
@@ -628,7 +629,7 @@ footer{
         display: none;
         margin-top: 65px;
         padding: 70px;
-        width: 60%;
+        width: 85%;
         display: flex;
         
         flex-direction: column;
@@ -637,7 +638,7 @@ footer{
         text-align: center;
         border-radius: 5px;
         background: var(--background-Hero);
-        width: 70%;
+        
     }
     .hero-card{
         display: none;
@@ -650,11 +651,13 @@ footer{
         text-align: center;
         align-items: center;
         
+        
     }
 
     
     .hero-info h1{
-        font-size: 20px;
+        font-size: 12px;
+        text-align: ;
         
         
     }
