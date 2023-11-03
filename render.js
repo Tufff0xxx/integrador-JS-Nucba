@@ -11,6 +11,7 @@ const botonesFiltro = document.querySelectorAll('.boton-filtro');
 const menuHamburguesa = document.querySelector('#menu');
 const navbarList = document.querySelector('.navbar-list');
 const botonPagar = document.querySelector('.pagar');
+const mensajeDiv = document.getElementById('mensaje'); // Elemento div para mensajes
 
 const guardarLocalStorage = () => {
     localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -19,6 +20,14 @@ const guardarLocalStorage = () => {
 let carritoAbierto = false;
 let productosMostrados = 3;
 let categoriaActual = 'Todos';
+
+function mostrarMensaje(mensaje, duracion = 3000) {
+    mensajeDiv.textContent = mensaje;
+    mensajeDiv.style.display = 'block';
+    setTimeout(() => {
+        mensajeDiv.style.display = 'none';
+    }, duracion);
+}
 
 function mostrarProductos(categoria, cantidad) {
     contenedor.innerHTML = '';
@@ -61,13 +70,12 @@ contenedor.addEventListener('click', (event) => {
             const carritoItem = carrito.find(item => item.id === productoSeleccionado.id);
 
             if (carritoItem) {
-                alert('Este producto ya está en el carrito');
-                
+                mostrarMensaje('Este producto ya está en el carrito');
             } else {
                 carrito.push({ ...productoSeleccionado, cantidad: 1 });
                 guardarLocalStorage();
                 mostrarCantidad();
-                alert('Producto agregado al carrito:', productoSeleccionado);
+                mostrarMensaje('Producto agregado al carrito');
             }
         }
     }
