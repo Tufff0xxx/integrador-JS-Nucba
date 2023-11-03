@@ -8,17 +8,18 @@ const btnSerie = document.getElementById('btnSerie');
 const btnDC = document.getElementById('btnDC');
 const btnVerMas = document.getElementById('btnVerMas');
 const botonesFiltro = document.querySelectorAll('.boton-filtro');
-const menuHamburguesa = document.querySelector('#menu')
-const navbarList = document.querySelector('.navbar-list')
-const botonPagar = document.querySelector('.pagar')
+const menuHamburguesa = document.querySelector('#menu');
+const navbarList = document.querySelector('.navbar-list');
+const botonPagar = document.querySelector('.pagar');
+
 const guardarLocalStorage = () => {
-    localStorage.setItem('carrito', JSON.stringify(carrito))
-}
-let carritoAbierto = false
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+};
+
+let carritoAbierto = false;
 let productosMostrados = 3;
 let categoriaActual = 'Todos';
 
-// Función para mostrar productos según la categoría y la cantidad especificada
 function mostrarProductos(categoria, cantidad) {
     contenedor.innerHTML = '';
 
@@ -35,9 +36,8 @@ function mostrarProductos(categoria, cantidad) {
                         <img class="logo-carta" src="${producto.logo}">
                     </div>
                     <div class="hero-card-price">
-                        <span class="funko-categoria">PRECIO $ </span>
+                        <span class="funko-categoria">PRECIO $</span>
                         <span class="funko-precio">${producto.precio}</span>
-
                     </div>
                     <button class="comprar" data-id="${producto.id}">COMPRAR</button>
                 </div>
@@ -61,47 +61,42 @@ contenedor.addEventListener('click', (event) => {
             const carritoItem = carrito.find(item => item.id === productoSeleccionado.id);
 
             if (carritoItem) {
-                carritoItem.cantidad++; // Aumenta la cantidad si el producto ya está en el carrito
+                alert('Este producto ya está en el carrito');
+                
             } else {
-                carrito.push({ ...productoSeleccionado, cantidad: 1 }); // Agrega el producto al carrito
+                carrito.push({ ...productoSeleccionado, cantidad: 1 });
+                guardarLocalStorage();
+                mostrarCantidad();
+                alert('Producto agregado al carrito:', productoSeleccionado);
             }
-
-            console.log('Producto agregado al carrito:', productoSeleccionado);
-            guardarLocalStorage()
-            mostrarCantidad()
         }
-
     }
 });
 
 const abrirMenu = () => {
     menuHamburguesa.addEventListener('click', () => {
-        navbarList.classList.toggle('visible')
-    })
-}
+        navbarList.classList.toggle('visible');
+    });
+};
 
-abrirMenu()
-
+abrirMenu();
 
 const abrirCerrarModal = () => {
-    
-   if(modalContenedor.style.display === 'block'){
-        modalContenedor.style.display = 'none'
-   }
-}
+    if (modalContenedor.style.display === 'block') {
+        modalContenedor.style.display = 'none';
+    }
+};
 
 const init = () => {
     carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    mostrarCantidad()
+    mostrarCantidad();
 
     botonesFiltro.forEach((boton) => {
         boton.addEventListener('click', () => {
-            // Quitamos la clase "activo" de todos los botones
             botonesFiltro.forEach((btn) => {
                 btn.classList.remove('activo');
             });
 
-            // Agregamos la clase "activo" al botón que se hizo clic
             boton.classList.add('activo');
         });
     });
@@ -143,23 +138,16 @@ const init = () => {
 
     mostrarProductos('Todos', productosMostrados);
 
-
-    verCarrito.addEventListener('click', (event)  => {
+    verCarrito.addEventListener('click', (event) => {
         event.preventDefault();
-        abrirCerrarModal()
+        abrirCerrarModal();
         if (carrito.length > 0) {
-            cargarCarrito()
+            cargarCarrito();
         } else {
-            carritoVacio()
+            carritoVacio();
         }
         mostrarCantidad();
-
     });
-    
+};
 
-
-
-
-}
-
-init ()
+init();

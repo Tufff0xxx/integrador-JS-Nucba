@@ -100,6 +100,15 @@ a{
     
 
 }
+.mensaje-agregado {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
 
 
 
@@ -657,7 +666,7 @@ footer{
     
     .hero-info h1{
         font-size: 12px;
-        text-align: ;
+        text-align: center;
         
         
     }
